@@ -15,7 +15,17 @@ class String
   end
 
   def count_sentences
-    split_strings = self.split(/[$.|?|!]/)
-   split_strings.size
+    splited_string = self.split(/[!?.]+/)
+    splited_string.length
+
+
+# string = self.squeeze(”.”)
+#  string = string.squeeze(”!”)
+# string.split(/[$.|?|!]/).count
+    # if self.length < 0
+    #   return 0
+    # end
+    # self.split(/[.!?]/).map{|x| !(x.match(/\w+/).nil?)}.reject{|x| x == false}.size
+  # splits string into Array, collects those would-be sentences that actually contain word characters, removes false values, then counts the remaining booleans.
   end
 end
