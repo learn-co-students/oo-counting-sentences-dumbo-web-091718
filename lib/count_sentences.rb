@@ -15,8 +15,6 @@ class String
   end
 
   def count_sentences
-    self.length ? self.split('.').size : 0
-    count = self.split(' ').count { |w| w.end_with?('.') || w.end_with?('!') || w.end_with?('?') }
+    self.split(' ').count { |w| w.end_with?('.') || w.end_with?('!') || w.end_with?('?') }
   end
 end
-
