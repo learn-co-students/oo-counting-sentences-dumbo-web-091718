@@ -18,10 +18,10 @@ class String
     count = 0
     word_arr = self.split(" ")
     word_arr.each do |word|
-    if word.sentence? || word.question? || word.exclamation?
-      count += 1
+      if word.sentence? || word.question? || word.exclamation?
+        count += 1
+      end
     end
-  end
     count
   end
 end
