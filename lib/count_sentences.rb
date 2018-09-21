@@ -16,13 +16,9 @@ class String
 
   def count_sentences
     array = self.split(" ")
-    count = 0 
-    array.each do |string|
-      if string.end_with?(".","?","!")
-        count+=1
-      end   
-    end
-    count 
+    array.count do |string|
+      string.end_with?(".","?","!")
+    end   
   end
 
 end
