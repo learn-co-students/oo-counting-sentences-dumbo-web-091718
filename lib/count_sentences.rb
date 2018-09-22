@@ -27,10 +27,14 @@ class String
   end
 
   def count_sentences
+    puncArr = [",","!","?"]
     if self.split == ""
       return 0
-    elsif self.splitself.split(" ").length
-        binding.pry
+    # elsif spaceSplit = self.split(" ")
+    else
+      # return splitSelf = self.split(/(.)("?")(!)/).length
+      return self.split(/[! . ? ] /).length
     end
   end
+
 end
