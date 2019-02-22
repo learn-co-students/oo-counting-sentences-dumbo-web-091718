@@ -1,31 +1,26 @@
+require "pry"
+
 class String
-
+  
   def sentence?
-    if self[-1] == "."
-      return true
-    else
-      return false
-    end
+    self[-1] == "."
   end
-
+  
   def question?
-    if self[-1] == "?"
-      return true
-    else
-      return false
-    end
-
+    self[-1] == "?"
   end
-
+  
   def exclamation?
-    if self[-1] == "!"
-      return true
-    else
-      return false
-    end
+    self[-1] == "!"
   end
-
+  
   def count_sentences
-    self.scan(/[^.!?]+/).count
+    n = 0
+    self.split(/[.!?]/).each do |i|
+      if i.length > 0
+        n += 1
+      end
+    end
+    n
   end
 end
